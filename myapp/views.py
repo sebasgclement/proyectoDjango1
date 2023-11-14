@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, JsonResponse
+#from django.http import HttpResponse, JsonResponse
 from .models import Project, Task
 from .forms import CreateNewTask
 
-
+# Create your views here.
 def index(request):
     title = 'Escuela de Formación Profesional de UNRaf'
     return render(request, "index.html",{
@@ -36,6 +36,7 @@ def create_task(request):
         'form':CreateNewTask() 
     })
 """
+
 def create_task(request):
     if request.method == 'GET':
         return render(request, "create_task.html", {
@@ -48,4 +49,4 @@ def create_task(request):
         
 
 
-# Create your views here.
+
